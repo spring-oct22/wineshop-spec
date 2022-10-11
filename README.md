@@ -53,3 +53,28 @@ Type ||--o{ Wine : belongs
 
 
 (Data attribution: [fedesoriano](https://www.kaggle.com/fedesoriano))
+
+# Wine recommendations
+
+* Data validation
+  * All fields must be obligatory when creating entries
+  * Catalog names cannot be empty
+  * Body and Acidity must be in 1-5 range
+  * Years must be in range 1900-current year
+  * Price, rating and number of reviews cannot be negative
+  * Rating must be in the 0-5 range
+
+* Provide a set of recommendations using the following endpoints, complying with the attached OpenAPI specification.
+
+
+  * `/api/recommend/best?top=10`
+    Best rated wines overall
+
+  * `/api/recommend/expensive?top=10`
+    Pricier wines
+
+  * `/api/recommend/bang?top=10`
+    Best bang for the buck: best rating-to-price ratios
+
+  * `/api/recommend/vintage?top=10`
+    Best vintage: Years with best rated wines (include list of wines for these years)

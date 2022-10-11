@@ -518,6 +518,124 @@ paths:
             '*/*':
               schema:
                 $ref: '#/components/schemas/Region'
+  /api/recommend/vintage:
+    get:
+      tags:
+      - recommend-controller
+      operationId: getVintage
+      parameters:
+      - name: top
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "400":
+          description: Bad Request
+          content:
+            '*/*':
+              schema:
+                type: object
+                additionalProperties:
+                  type: string
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: object
+                additionalProperties:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/Wine'
+  /api/recommend/expensive:
+    get:
+      tags:
+      - recommend-controller
+      operationId: getExpensive
+      parameters:
+      - name: top
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "400":
+          description: Bad Request
+          content:
+            '*/*':
+              schema:
+                type: object
+                additionalProperties:
+                  type: string
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Wine'
+  /api/recommend/best:
+    get:
+      tags:
+      - recommend-controller
+      operationId: getBest
+      parameters:
+      - name: top
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "400":
+          description: Bad Request
+          content:
+            '*/*':
+              schema:
+                type: object
+                additionalProperties:
+                  type: string
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Wine'
+  /api/recommend/bang:
+    get:
+      tags:
+      - recommend-controller
+      operationId: getBang
+      parameters:
+      - name: top
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "400":
+          description: Bad Request
+          content:
+            '*/*':
+              schema:
+                type: object
+                additionalProperties:
+                  type: string
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Wine'
 components:
   schemas:
     Winery:
