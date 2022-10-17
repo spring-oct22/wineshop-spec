@@ -78,3 +78,21 @@ Type ||--o{ Wine : belongs
 
   * `/api/recommend/vintage?top=10`
     Best vintage: Years with best rated wines (include list of wines for these years)
+    
+* Authentication
+  * Unauthenticated reads
+  * Writes and deletions require basic authentication
+  * Assign users to different roles
+  * Create and Update require the USER role
+  * Deletions require the ADMIN role
+
+* Non-functional requirements
+  * Expose observability endpoints under `/manage`
+    * Application health
+      * Application up
+      * Disk space
+      * Database connection
+    * Metrics
+      * Keep track of number of requests
+    * Endpoints
+      * Show a list of all configured endpoints
