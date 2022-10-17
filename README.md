@@ -38,6 +38,8 @@ Region ||--o{ Wine : harvests
 Type ||--o{ Wine : belongs
 ```
 
+(Data attribution: [fedesoriano](https://www.kaggle.com/fedesoriano))
+
 * Build a RESTful API around the model implementing entity lists and all CRUD operations implementing the attached [OpenAPI specification](api-docs.yaml).
 
     * `/api/wine/{id}`
@@ -45,16 +47,11 @@ Type ||--o{ Wine : belongs
     * `/api/region/{id}`
     * `/api/type/{id}`
 
-* Create unit tests.
-
-* Create functional tests.
+* Create tests
+  * Create unit tests.
+  * Create functional tests.
 
 * Implement basic authentication.
-
-
-(Data attribution: [fedesoriano](https://www.kaggle.com/fedesoriano))
-
-# Wine recommendations
 
 * Data validation
   * All fields must be obligatory when creating entries
@@ -65,7 +62,6 @@ Type ||--o{ Wine : belongs
   * Rating must be in the 0-5 range
 
 * Provide a set of recommendations using the following endpoints, complying with the attached OpenAPI specification.
-
 
   * `/api/recommend/best?top=10`
     Best rated wines overall
